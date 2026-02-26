@@ -3,7 +3,7 @@ from fastapi import FastAPI, Request
 import requests
 
 TOKEN = os.getenv("BOT_TOKEN")
-ADMIN_ID = os.getenv("ADMIN_USER_ID")
+ADMIN_ID = str(os.getenv("ADMIN_USER_ID")).strip()
 
 app = FastAPI()
 
